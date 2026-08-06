@@ -1,0 +1,12 @@
+<svg viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .logo-text-black { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 72px; font-weight: 800; fill: #1a1a1a; letter-spacing: -1px; }
+      .logo-text-green { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 72px; font-weight: 800; fill: #1db854; letter-spacing: -1px; }
+    </style>
+  </defs>
+  <!-- Main logo text: KOR in black -->
+  <text x="12" y="82" class="logo-text-black">kor</text>
+  <!-- Main logo text: VEX in green -->
+  <text x="200" y="82" class="logo-text-green">vex</text>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "name": "KORVEX - Web Development & Digital Marketing",
+  "short_name": "KORVEX",
+  "description": "Premium Web Development & Digital Marketing Agency. Custom coding, e-commerce websites, and data-driven digital marketing solutions.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fb",
+  "theme_color": "#1db854",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo_korvex.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
