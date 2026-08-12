@@ -92,8 +92,8 @@ export function Careers() {
         <h2>Open Positions ({jobs.length})</h2>
         <div className="jobs-list">
           {jobs.map((job) => (
-            <div 
-              key={job.title} 
+            <div
+              key={job.title}
               className="job-card glass-card"
               onClick={() => setSelectedJob(selectedJob?.title === job.title ? null : job)}
             >
@@ -106,16 +106,16 @@ export function Careers() {
                     <span className="job-type">{job.type}</span>
                   </div>
                 </div>
-                <button 
+                <button
                   className="btn btn-outline"
                   onClick={(e) => handleApplyClick(job, e)}
                 >
                   Apply Now
                 </button>
               </div>
-              
+
               <p className="job-short-desc">{job.desc}</p>
-              
+
               <div className="job-expand-indicator">
                 {selectedJob?.title === job.title ? 'Click to collapse details ▲' : 'Click to view full details ▼'}
               </div>
@@ -142,7 +142,7 @@ export function Careers() {
                     </div>
                   </div>
                   <div className="job-details-action text-right">
-                    <button 
+                    <button
                       className="btn btn-primary"
                       onClick={(e) => handleApplyClick(job, e)}
                     >
@@ -161,7 +161,7 @@ export function Careers() {
         <div className="modal-overlay" onClick={() => setApplyJob(null)}>
           <div className="modal-content glass-card" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setApplyJob(null)}>×</button>
-            
+
             {formSubmitted ? (
               <div className="form-success-state text-center">
                 <span className="success-icon">🎉</span>
@@ -173,27 +173,27 @@ export function Careers() {
               <>
                 <h3>Apply for {applyJob.title}</h3>
                 <p className="modal-subtitle">{applyJob.department} · {applyJob.location}</p>
-                
+
                 <form className="careers-apply-form" onSubmit={handleFormSubmit}>
                   <div className="form-row">
                     <label>
                       Full Name *
-                      <input 
-                        type="text" 
-                        required 
+                      <input
+                        type="text"
+                        required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="John Doe" 
+                        placeholder="John Doe"
                       />
                     </label>
                     <label>
                       Email Address *
-                      <input 
-                        type="email" 
-                        required 
+                      <input
+                        type="email"
+                        required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@example.com" 
+                        placeholder="john@example.com"
                       />
                     </label>
                   </div>
@@ -201,43 +201,43 @@ export function Careers() {
                   <div className="form-row">
                     <label>
                       Phone / WhatsApp Number *
-                      <input 
-                        type="text" 
-                        required 
+                      <input
+                        type="text"
+                        required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 70414 57314" 
+                        placeholder="+91 70414 57314"
                       />
                     </label>
                     <label>
                       Resume Link (GDrive/Dropbox) *
-                      <input 
-                        type="url" 
-                        required 
+                      <input
+                        type="url"
+                        required
                         value={formData.resume}
                         onChange={(e) => setFormData({ ...formData, resume: e.target.value })}
-                        placeholder="https://drive.google.com/..." 
+                        placeholder="https://drive.google.com/..."
                       />
                     </label>
                   </div>
 
                   <label>
                     Portfolio or GitHub Link (Optional)
-                    <input 
-                      type="url" 
+                    <input
+                      type="url"
                       value={formData.portfolio}
                       onChange={(e) => setFormData({ ...formData, portfolio: e.target.value })}
-                      placeholder="https://github.com/..." 
+                      placeholder="https://github.com/..."
                     />
                   </label>
 
                   <label>
                     Brief Cover Note
-                    <textarea 
-                      rows="4" 
+                    <textarea
+                      rows="4"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Tell us why you are a great fit for KORVEX..." 
+                      placeholder="Tell us why you are a great fit for KORVEX..."
                     />
                   </label>
 

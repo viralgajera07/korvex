@@ -1,4 +1,42 @@
+import { useState } from 'react';
+
 export function ContactForm() {
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', service: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitted(true);
+        setFormData({ name: '', phone: '', email: '', service: '', message: '' });
+      } else if (data.details) {
+        const detailsText = Object.values(data.details).join(' ');
+        setErrorMessage(detailsText);
+      } else {
+        setErrorMessage(data.error || 'Failed to send inquiry. Please try again.');
+      }
+    } catch (err) {
+      console.error('Error submitting inquiry:', err);
+      setErrorMessage('Network error. Please make sure the server is running.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="section reveal">
       <div className="contact-shell">
@@ -12,38 +50,84 @@ export function ContactForm() {
           </div>
         </div>
 
-        <form className="contact-form">
-          <label>
-            Name
-            <input type="text" placeholder="Your name" />
-          </label>
-          <label>
-            Phone / WhatsApp Number
-            <input type="text" placeholder="+91 70414 57314" />
-          </label>
-          <label>
-            Email
-            <input type="email" placeholder="you@example.com" />
-          </label>
-          <label>
-            Service Interested In
-            <select defaultValue="">
-              <option value="" disabled>
-                Select one
-              </option>
-              <option>Website Development</option>
-              <option>E-commerce</option>
-              <option>Digital Marketing</option>
-              <option>Both</option>
-            </select>
-          </label>
-          <label>
-            Message
-            <textarea rows="4" placeholder="Tell us about your project or growth goal..." />
-          </label>
-          <button className="btn btn-primary" type="submit">Request Consultation</button>
-        </form>
+        {submitted ? (
+          <div className="contact-form glass-card text-center" style={{ padding: '32px', textAlign: 'center' }}>
+            <span style={{ fontSize: '40px' }}>🎉</span>
+            <h3 style={{ marginTop: '12px' }}>Inquiry Submitted!</h3>
+            <p style={{ margin: '12px 0 20px', color: 'var(--text-muted, #9ca3af)' }}>
+              Thank you for reaching out. We will get back to you shortly!
+            </p>
+            <button className="btn btn-outline" onClick={() => setSubmitted(false)}>Send Another Message</button>
+          </div>
+        ) : (
+          <form className="contact-form" onSubmit={handleSubmit}>
+            {errorMessage && (
+              <div style={{ color: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)', padding: '12px 16px', borderRadius: '8px', marginBottom: '16px', fontSize: '14px', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+                {errorMessage}
+              </div>
+            )}
+            <label>
+              Name *
+              <input
+                type="text"
+                required
+                placeholder="Your name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              />
+            </label>
+            <label>
+              Phone / WhatsApp Number *
+              <input
+                type="text"
+                required
+                placeholder="+91 70414 57314"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              />
+            </label>
+            <label>
+              Email *
+              <input
+                type="email"
+                required
+                placeholder="you@example.com"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              />
+            </label>
+            <label>
+              Service Interested In
+              <select
+                value={formData.service}
+                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+              >
+                <option value="" disabled>
+                  Select one
+                </option>
+                <option value="Website Development">Website Development</option>
+                <option value="E-commerce Store">E-commerce</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Full Scale Growth Funnel">Both</option>
+              </select>
+            </label>
+            <label>
+              Message *
+              <textarea
+                rows="4"
+                required
+                placeholder="Tell us about your project or growth goal..."
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              />
+            </label>
+            <button className="btn btn-primary" type="submit" disabled={submitting}>
+              {submitting ? 'Submitting...' : 'Request Consultation'}
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );
 }
+

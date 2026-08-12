@@ -83,7 +83,7 @@ export function Services() {
         </div>
       </section>
 
-      <section className="pricing-section">
+      {/* <section className="pricing-section">
         <div className="section-heading text-center">
           <span className="section-label">Transparent Estimates</span>
           <h2>Pricing tiers tailored to your growth stage.</h2>
@@ -111,7 +111,7 @@ export function Services() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

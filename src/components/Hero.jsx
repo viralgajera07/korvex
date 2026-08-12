@@ -33,7 +33,18 @@ export function Hero({ stats }) {
   const tags = ['Startups', 'E-commerce', 'Local Businesses', 'Real Estate', 'Clinics', 'Coaches'];
 
   return (
-    <section id="home" className="hero reveal">
+    <section id="home" className="hero reveal hero-banner-card">
+      <div className="hero-bg-wrapper" aria-hidden="true">
+        <img
+          src="/hero-bg.jpg"
+          alt="Hero Background"
+          className="hero-bg-media"
+          onError={(e) => { e.currentTarget.src = '/hero-bg.png'; }}
+        />
+        <div className="hero-bg-overlay"></div>
+        <div className="hero-bg-grid-overlay"></div>
+      </div>
+
       <div className="hero-container">
         <div className="hero-content">
           <span className="pill">Web Development · E-Commerce · Digital Marketing</span>
@@ -43,7 +54,7 @@ export function Hero({ stats }) {
           <p className="hero-lead">
             KORVEX helps ambitious brands launch high-performance websites, e-commerce stores, and data-driven campaigns that turn visitors into paying customers.
           </p>
-          
+
           <div className="hero-actions">
             <a className="btn btn-primary" href="#contact">
               Get Free Consultation
@@ -86,7 +97,7 @@ export function Hero({ stats }) {
               </div>
               <div className="browser-address">https://korvex.co/dashboard</div>
             </div>
-            
+
             <div className="browser-content">
               <div className="mock-dashboard">
                 <div className="dashboard-sidebar">
@@ -98,13 +109,13 @@ export function Hero({ stats }) {
                     <span className="nav-item"></span>
                   </div>
                 </div>
-                
+
                 <div className="dashboard-main">
                   <div className="main-header">
                     <div className="header-title"></div>
                     <div className="header-status">Live Campaigns</div>
                   </div>
-                  
+
                   <div className="widgets-grid">
                     <div className="widget-card">
                       <div className="widget-label">Conversion Rate</div>
@@ -116,7 +127,7 @@ export function Hero({ stats }) {
                         </svg>
                       </div>
                     </div>
-                    
+
                     <div className="widget-card">
                       <div className="widget-label">Ad Spend ROAS</div>
                       <div className="widget-value">4.2x <span className="trend positive">Target 4x</span></div>
@@ -125,7 +136,7 @@ export function Hero({ stats }) {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="analytics-card">
                     <div className="analytics-header">
                       <div className="analytics-title"></div>
@@ -148,7 +159,7 @@ export function Hero({ stats }) {
                 </div>
               </div>
             </div>
-            
+
             {/* Floating Glass Widgets */}
             <div className="floating-widget glass-sales">
               <span className="f-icon">💰</span>
@@ -157,7 +168,7 @@ export function Hero({ stats }) {
                 <span className="f-value">$12,450.00</span>
               </div>
             </div>
-            
+
             <div className="floating-widget glass-leads">
               <span className="f-icon">🚀</span>
               <div className="f-info">

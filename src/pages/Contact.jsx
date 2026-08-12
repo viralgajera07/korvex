@@ -3,17 +3,45 @@ import { useState } from 'react';
 export function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [bookingSubmitted, setBookingSubmitted] = useState(false);
-  
+
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' });
   const [bookingData, setBookingData] = useState({ date: 'Monday', time: '11:00 AM' });
+
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const slots = ['10:00 AM', '11:30 AM', '2:00 PM', '4:00 PM', '5:30 PM'];
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    setSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setFormSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+      } else if (data.details) {
+        const detailsText = Object.values(data.details).join(' ');
+        setErrorMessage(detailsText);
+      } else {
+        setErrorMessage(data.error || 'Failed to send inquiry. Please check details and try again.');
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setErrorMessage('Network error. Please ensure the backend server is running.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleBookingSubmit = (e) => {
@@ -55,7 +83,7 @@ export function Contact() {
                 <span className="detail-icon">📍</span>
                 <div>
                   <strong>Surat Office</strong>
-                  <p>Adajan, Surat, Gujarat, India - 395009</p>
+                  <p>235, Apple Square, Near Swastic Plaza, Yogichowk, Nana Varachha, Surat - 395010</p>
                 </div>
               </li>
             </ul>
@@ -64,7 +92,7 @@ export function Contact() {
           <div className="calendar-box glass-card">
             <h3>📅 Instant 30-Min Consultation</h3>
             <p className="cal-sub">Select your preferred slot in our schedule below.</p>
-            
+
             {bookingSubmitted ? (
               <div className="booking-success text-center">
                 <span className="b-success-icon">✅</span>
@@ -77,7 +105,7 @@ export function Contact() {
                 <div className="cal-selectors">
                   <div className="selector-group">
                     <label>Select Day:</label>
-                    <select 
+                    <select
                       value={bookingData.date}
                       onChange={(e) => setBookingData({ ...bookingData, date: e.target.value })}
                     >
@@ -89,7 +117,7 @@ export function Contact() {
 
                   <div className="selector-group">
                     <label>Select Time Slot (IST):</label>
-                    <select 
+                    <select
                       value={bookingData.time}
                       onChange={(e) => setBookingData({ ...bookingData, time: e.target.value })}
                     >
@@ -110,7 +138,7 @@ export function Contact() {
           <div className="contact-form-wrapper glass-card">
             <h3>Send us a Message</h3>
             <p>Tell us about your project, target audience, and monthly growth budget.</p>
-            
+
             {formSubmitted ? (
               <div className="form-success-state text-center">
                 <span className="success-icon">🎉</span>
@@ -120,43 +148,48 @@ export function Contact() {
               </div>
             ) : (
               <form className="contact-main-form" onSubmit={handleContactSubmit}>
+                {errorMessage && (
+                  <div style={{ color: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)', padding: '12px 16px', borderRadius: '8px', marginBottom: '16px', fontSize: '14px', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+                    {errorMessage}
+                  </div>
+                )}
                 <label>
                   Full Name *
-                  <input 
-                    type="text" 
-                    required 
+                  <input
+                    type="text"
+                    required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Your name" 
+                    placeholder="Your name"
                   />
                 </label>
-                
+
                 <div className="form-row">
                   <label>
                     Email Address *
-                    <input 
-                      type="email" 
-                      required 
+                    <input
+                      type="email"
+                      required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="you@example.com" 
+                      placeholder="you@example.com"
                     />
                   </label>
                   <label>
                     WhatsApp Number *
-                    <input 
-                      type="text" 
-                      required 
+                    <input
+                      type="text"
+                      required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+91 70414 57314" 
+                      placeholder="+91 70414 57314"
                     />
                   </label>
                 </div>
 
                 <label>
                   Service Interested In *
-                  <select 
+                  <select
                     required
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
@@ -171,16 +204,18 @@ export function Contact() {
 
                 <label>
                   Message / Context *
-                  <textarea 
-                    rows="5" 
+                  <textarea
+                    rows="5"
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your project, current conversions, or budget..." 
+                    placeholder="Tell us about your project, current conversions, or budget..."
                   />
                 </label>
 
-                <button className="btn btn-primary full-width-btn" type="submit">Submit Inquiry</button>
+                <button className="btn btn-primary full-width-btn" type="submit" disabled={submitting}>
+                  {submitting ? 'Submitting...' : 'Submit Inquiry'}
+                </button>
               </form>
             )}
           </div>

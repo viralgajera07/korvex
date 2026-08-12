@@ -21,16 +21,16 @@ export function validateInquiryPayload(body) {
     errors.name = 'Name is required and must be at least 2 characters.';
   }
 
-  if (!phone || !PHONE_REGEX.test(phone)) {
-    errors.phone = 'A valid phone number is required.';
+  if (!phone || !PHONE_REGEX.test(phone.trim())) {
+    errors.phone = 'A valid phone number is required (7 to 20 digits).';
   }
 
-  if (!email || !EMAIL_REGEX.test(email)) {
+  if (!email || !EMAIL_REGEX.test(email.trim())) {
     errors.email = 'A valid email address is required.';
   }
 
-  if (!message || message.length < 10) {
-    errors.message = 'Message is required and must be at least 10 characters.';
+  if (!message || message.length < 2) {
+    errors.message = 'Message is required (at least 2 characters).';
   }
 
   if (Object.keys(errors).length > 0) {
