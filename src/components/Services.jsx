@@ -39,21 +39,31 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="section reveal">
-      <div className="section-heading">
+    <section id="services" className="services-section-wrapper reveal">
+      <div className="section-heading text-center">
         <span className="section-label">What We Do</span>
         <h2>Premium digital services for brands that want faster growth.</h2>
-        <p>From custom websites to paid acquisition, every service is built to simplify your growth and sharpen your conversion rate.</p>
+        <p className="services-lead-desc">
+          From custom websites to paid acquisition, every service is built to simplify your growth and sharpen your conversion rate.
+        </p>
       </div>
-      <div className="card-grid services-grid">
+
+      <div className="services-card-grid">
         {items.map((item) => (
-          <article key={item.title} className="info-card service-card">
-            <div className="card-number">{item.icon}</div>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <ul>
+          <article key={item.title} className="service-card-item">
+            <div className="service-card-top">
+              <span className="service-number-badge">{item.icon}</span>
+            </div>
+            <h3 className="service-card-title">{item.title}</h3>
+            <p className="service-card-desc">{item.description}</p>
+            <ul className="service-bullets-list">
               {item.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
+                <li key={bullet}>
+                  <svg className="service-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>{bullet}</span>
+                </li>
               ))}
             </ul>
           </article>
