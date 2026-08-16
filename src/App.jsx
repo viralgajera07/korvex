@@ -11,6 +11,7 @@ import { Services } from './pages/Services';
 import { Careers } from './pages/Careers';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
+import { Legal } from './pages/Legal';
 
 const stats = [
   { label: 'Projects Delivered', value: 100, suffix: '+' },
@@ -84,6 +85,15 @@ function AppContent() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/terms" element={<Legal />} />
+          <Route path="/terms-of-service" element={<Legal />} />
+          <Route path="/privacy" element={<Legal />} />
+          <Route path="/privacy-policy" element={<Legal />} />
+          <Route path="/refund" element={<Legal />} />
+          <Route path="/refund-policy" element={<Legal />} />
+          <Route path="/security" element={<Legal />} />
+          <Route path="/security-uptime" element={<Legal />} />
         </Routes>
       </main>
 

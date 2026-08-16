@@ -58,10 +58,10 @@ export function Footer() {
         <div className="footer-col">
           <h4>Legal &amp; Policy</h4>
           <ul>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Refund Policy</a></li>
-            <li><a href="#">Security &amp; Uptime</a></li>
+            <li><Link to="/terms-of-service">Terms of Service</Link></li>
+            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+            <li><Link to="/refund-policy">Refund Policy</Link></li>
+            <li><Link to="/security-uptime">Security &amp; Uptime</Link></li>
           </ul>
         </div>
       </div>
