@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PhoneInput } from '../components/PhoneInput';
 
 export function Careers() {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -201,12 +202,11 @@ export function Careers() {
                   <div className="form-row">
                     <label>
                       Phone / WhatsApp Number *
-                      <input
-                        type="text"
+                      <PhoneInput
                         required
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 70414 57314"
+                        onChange={(val) => setFormData({ ...formData, phone: val })}
+                        placeholder="70414 57314"
                       />
                     </label>
                     <label>

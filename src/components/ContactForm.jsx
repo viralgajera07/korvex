@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { PhoneInput } from './PhoneInput';
+import { CustomSelect } from './CustomSelect';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', service: '', message: '' });
@@ -78,12 +80,11 @@ export function ContactForm() {
             </label>
             <label>
               Phone / WhatsApp Number *
-              <input
-                type="text"
+              <PhoneInput
                 required
-                placeholder="+91 70414 57314"
                 value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                onChange={(val) => setFormData({ ...formData, phone: val })}
+                placeholder="70414 57314"
               />
             </label>
             <label>
@@ -98,18 +99,17 @@ export function ContactForm() {
             </label>
             <label>
               Service Interested In
-              <select
+              <CustomSelect
+                options={[
+                  { value: 'Website Development', label: 'Website Development' },
+                  { value: 'E-commerce Store', label: 'E-commerce' },
+                  { value: 'Digital Marketing', label: 'Digital Marketing' },
+                  { value: 'Full Scale Growth Funnel', label: 'Both' },
+                ]}
                 value={formData.service}
-                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              >
-                <option value="" disabled>
-                  Select one
-                </option>
-                <option value="Website Development">Website Development</option>
-                <option value="E-commerce Store">E-commerce</option>
-                <option value="Digital Marketing">Digital Marketing</option>
-                <option value="Full Scale Growth Funnel">Both</option>
-              </select>
+                onChange={(val) => setFormData({ ...formData, service: val })}
+                placeholder="Select one"
+              />
             </label>
             <label>
               Message *

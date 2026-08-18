@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { PhoneInput } from '../components/PhoneInput';
+import { CustomSelect } from '../components/CustomSelect';
 
 export function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -12,6 +14,13 @@ export function Contact() {
 
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   const slots = ['10:00 AM', '11:30 AM', '2:00 PM', '4:00 PM', '5:30 PM'];
+
+  const serviceOptions = [
+    { value: 'web', label: 'Website Development' },
+    { value: 'ecom', label: 'E-Commerce Store' },
+    { value: 'ads', label: 'Meta & Google Ads' },
+    { value: 'all', label: 'Full Scale Growth Funnel' },
+  ];
 
   const handleContactSubmit = async (e) => {
     e.preventDefault();
@@ -105,26 +114,20 @@ export function Contact() {
                 <div className="cal-selectors">
                   <div className="selector-group">
                     <label>Select Day:</label>
-                    <select
+                    <CustomSelect
+                      options={days}
                       value={bookingData.date}
-                      onChange={(e) => setBookingData({ ...bookingData, date: e.target.value })}
-                    >
-                      {days.map((d) => (
-                        <option key={d} value={d}>{d}</option>
-                      ))}
-                    </select>
+                      onChange={(val) => setBookingData({ ...bookingData, date: val })}
+                    />
                   </div>
 
                   <div className="selector-group">
                     <label>Select Time Slot (IST):</label>
-                    <select
+                    <CustomSelect
+                      options={slots}
                       value={bookingData.time}
-                      onChange={(e) => setBookingData({ ...bookingData, time: e.target.value })}
-                    >
-                      {slots.map((s) => (
-                        <option key={s} value={s}>{s}</option>
-                      ))}
-                    </select>
+                      onChange={(val) => setBookingData({ ...bookingData, time: val })}
+                    />
                   </div>
                 </div>
                 <button className="btn btn-primary full-width-btn" type="submit">Schedule Meet Slot</button>
@@ -177,29 +180,23 @@ export function Contact() {
                   </label>
                   <label>
                     WhatsApp Number *
-                    <input
-                      type="text"
+                    <PhoneInput
                       required
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+91 70414 57314"
+                      onChange={(val) => setFormData({ ...formData, phone: val })}
+                      placeholder="70414 57314"
                     />
                   </label>
                 </div>
 
                 <label>
                   Service Interested In *
-                  <select
-                    required
+                  <CustomSelect
+                    options={serviceOptions}
                     value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  >
-                    <option value="" disabled>Select a capability</option>
-                    <option value="web">Website Development</option>
-                    <option value="ecom">E-Commerce Store</option>
-                    <option value="ads">Meta & Google Ads</option>
-                    <option value="all">Full Scale Growth Funnel</option>
-                  </select>
+                    onChange={(val) => setFormData({ ...formData, service: val })}
+                    placeholder="Select a capability"
+                  />
                 </label>
 
                 <label>

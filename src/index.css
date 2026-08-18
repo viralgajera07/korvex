@@ -4882,4 +4882,221 @@ textarea {
     width: 100%;
     justify-content: center;
   }
-}
+}
+
+/* Phone Input & Country Code Styling */
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.phone-country-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 72px;
+  flex-shrink: 0;
+  padding: 0.65rem 1.25rem 0.65rem 0.65rem;
+  border-radius: 10px;
+  border: 1px solid var(--border, rgba(29, 184, 84, 0.2));
+  background-color: var(--bg-soft, #ffffff);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  color: var(--text, #1a1a1a);
+  font-weight: 600;
+  font-size: 0.92rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.phone-country-select:focus {
+  border-color: var(--accent, #1db854);
+  box-shadow: 0 0 0 3px rgba(29, 184, 84, 0.15);
+}
+
+.phone-number-field {
+  flex: 1;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid var(--border, rgba(29, 184, 84, 0.2));
+  background: var(--bg-soft, #ffffff);
+  color: var(--text, #1a1a1a);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.phone-number-field:focus {
+  border-color: var(--accent, #1db854);
+  box-shadow: 0 0 0 3px rgba(29, 184, 84, 0.15);
+}
+
+/* Custom Select Dropdown UI Styling */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 0.75rem 2.25rem 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(29, 184, 84, 0.2);
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  color: var(--text, #1a1a1a);
+  font-weight: 500;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+select:focus {
+  border-color: #1db854;
+  box-shadow: 0 0 0 3px rgba(29, 184, 84, 0.15);
+}
+
+select option {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 12px;
+  font-size: 0.95rem;
+}
+
+select option:disabled {
+  color: #9ca3af;
+}
+
+/* Premium Custom Select Component UI */
+.custom-select-container {
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(29, 184, 84, 0.2);
+  background: #ffffff;
+  color: var(--text, #1a1a1a);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  text-align: left;
+}
+
+.custom-select-trigger:focus,
+.custom-select-container.is-open .custom-select-trigger {
+  border-color: var(--accent, #1db854);
+  box-shadow: 0 0 0 3px rgba(29, 184, 84, 0.15);
+  background: #ffffff;
+}
+
+.custom-select-value.is-placeholder {
+  color: #9ca3af;
+}
+
+.custom-select-arrow {
+  transition: transform 0.25s ease;
+  color: #374151;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.custom-select-arrow.arrow-up {
+  transform: rotate(180deg);
+  color: var(--accent, #1db854);
+}
+
+.custom-select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #ffffff;
+  border: 1px solid rgba(29, 184, 84, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 6px;
+  margin: 0;
+  list-style: none;
+  max-height: 240px;
+  overflow-y: auto;
+  animation: selectMenuFadeIn 0.2s ease-out;
+}
+
+@keyframes selectMenuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.custom-select-option:hover {
+  background: rgba(29, 184, 84, 0.08);
+  color: #1db854;
+}
+
+.custom-select-option.is-selected {
+  background: rgba(29, 184, 84, 0.12);
+  color: #158548;
+  font-weight: 600;
+}
+
+/* Phone Input Custom Select Overrides */
+.phone-country-custom-select {
+  width: 80px !important;
+  flex-shrink: 0;
+}
+
+.phone-country-custom-select .custom-select-trigger {
+  padding: 0.65rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  justify-content: space-between;
+}
+
+.phone-country-custom-select .custom-select-menu {
+  width: 95px;
+  min-width: 95px;
+}
+
+
+
+
