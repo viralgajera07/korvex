@@ -4,6 +4,7 @@ import { CustomSelect } from '../components/CustomSelect';
 
 export function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' });
 
   const [submitting, setSubmitting] = useState(false);
@@ -53,7 +54,7 @@ export function Contact() {
         <span className="pill">Contact Us</span>
         <h1>Ready to build your website or scale your ads?</h1>
         <p className="lead-text">
-          Reach out through the contact form below or contact us directly.
+          Reach out through the contact form or connect with us directly.
         </p>
       </div>
 
