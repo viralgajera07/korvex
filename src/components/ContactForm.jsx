@@ -103,6 +103,8 @@ export function ContactForm() {
                 options={[
                   { value: 'Website Development', label: 'Website Development' },
                   { value: 'E-commerce Store', label: 'E-commerce' },
+                  { value: 'AI & ML Development', label: 'AI & ML Development' },
+                  { value: 'App Development', label: 'App Development' },
                   { value: 'Digital Marketing', label: 'Digital Marketing' },
                   { value: 'Full Scale Growth Funnel', label: 'Both' },
                 ]}

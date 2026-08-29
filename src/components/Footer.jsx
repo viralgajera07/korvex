@@ -16,7 +16,7 @@ export function Footer() {
             <Logo />
           </div>
           <p className="footer-brand-desc">
-            KORVEX builds high-performance websites, e-commerce storefronts, and data-driven ad campaigns that turn visitors into loyal customers.
+            KORVEX builds high-performance websites, e-commerce storefronts, custom AI/ML architecture, and data-driven ad campaigns that turn visitors into loyal customers.
           </p>
           <div className="footer-contact-list">
             <a href="tel:+917041457314" className="footer-contact-item">
@@ -37,11 +37,14 @@ export function Footer() {
         <div className="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><Link to="/services">Web Development</Link></li>
-            <li><Link to="/services">E-Commerce Stores</Link></li>
-            <li><Link to="/services">Meta &amp; Google Ads</Link></li>
-            <li><Link to="/services">SEO Optimization</Link></li>
-            <li><Link to="/services">Growth Funnels</Link></li>
+            <li><Link to="/services/website-development">Web Development</Link></li>
+            <li><Link to="/services/e-commerce-development">E-Commerce Stores</Link></li>
+            <li><Link to="/services/ai-ml-development">AI &amp; ML Development</Link></li>
+            <li><Link to="/services/app-development">App Development</Link></li>
+            <li><Link to="/services/meta-ads-management">Meta Ads Management</Link></li>
+            <li><Link to="/services/social-media-marketing">Social Media Marketing</Link></li>
+            <li><Link to="/services/analytics-maintenance">Analytics &amp; Maintenance</Link></li>
+            <li><Link to="/services/growth-strategy">Growth Strategy</Link></li>
           </ul>
         </div>
 

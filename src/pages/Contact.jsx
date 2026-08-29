@@ -13,6 +13,8 @@ export function Contact() {
   const serviceOptions = [
     { value: 'web', label: 'Website Development' },
     { value: 'ecom', label: 'E-Commerce Store' },
+    { value: 'aiml', label: 'AI & ML Development' },
+    { value: 'app', label: 'App Development' },
     { value: 'ads', label: 'Meta & Google Ads' },
     { value: 'all', label: 'Full Scale Growth Funnel' },
   ];
