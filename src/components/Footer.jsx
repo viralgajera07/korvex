@@ -2,10 +2,6 @@ import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 
 export function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="site-footer-premium">
       <div className="footer-ambient-glow" aria-hidden="true"></div>
@@ -27,10 +23,6 @@ export function Footer() {
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               help.korvex@gmail.com
             </a>
-            <div className="footer-contact-item address-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span>235, Apple Square, Near Swastic Plaza, Yogichowk, Surat - 395010</span>
-            </div>
           </div>
         </div>
 
@@ -72,12 +64,6 @@ export function Footer() {
       <div className="footer-bottom-bar">
         <div className="footer-bottom-inner">
           <span>© {new Date().getFullYear()} KORVEX Digital Agency. All Rights Reserved.</span>
-          <div className="footer-status-badge">
-            <span className="status-indicator"></span> All Systems Operational
-          </div>
-          <button className="back-to-top-btn" onClick={scrollToTop} aria-label="Back to Top">
-            ↑ Top
-          </button>
         </div>
       </div>
     </footer>

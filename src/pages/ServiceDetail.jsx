@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getServiceBySlug, servicesData } from '../data/servicesData';
+import { ServiceIcon } from '../components/ServiceIcon';
 import { PhoneInput } from '../components/PhoneInput';
 import { CustomSelect } from '../components/CustomSelect';
 
@@ -87,7 +88,9 @@ export function ServiceDetail() {
       <header className="sd-hero-section">
         <div className="sd-hero-badge-wrap">
           <span className="sd-number-tag">{service.number}</span>
-          <span className="sd-icon-badge">{service.icon}</span>
+          <div className="service-icon-wrapper">
+            <ServiceIcon slug={service.slug} width={24} height={24} />
+          </div>
         </div>
         <h1 className="sd-hero-title">{service.heroTitle}</h1>
         <p className="sd-hero-tagline">{service.tagline}</p>
@@ -306,7 +309,9 @@ export function ServiceDetail() {
             <div key={item.slug} className="sd-other-card glass-card" onClick={() => navigate(`/services/${item.slug}`)}>
               <div className="sd-other-top">
                 <span className="sd-other-badge">{item.number}</span>
-                <span className="sd-other-icon">{item.icon}</span>
+                <div className="service-icon-wrapper">
+                  <ServiceIcon slug={item.slug} width={20} height={20} />
+                </div>
               </div>
               <h4>{item.title}</h4>
               <p>{item.description}</p>

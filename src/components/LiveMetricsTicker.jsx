@@ -1,22 +1,22 @@
 export function LiveMetricsTicker() {
-  const tickerItems = [
-    { label: 'Avg Load Time', val: '< 0.4s' },
-    { label: 'Client Retention Rate', val: '98.5%' },
-    { label: 'Average ROAS on Meta & Google Ads', val: '4.2x+' },
-    { label: 'Google Core Web Vitals Score', val: '99/100' },
-    { label: 'Projects Delivered On Time', val: '100%' },
-    { label: 'Total Revenue Generated for Clients', val: '$12.4M+' },
+  const agencyFeatures = [
+    { icon: '⚡', label: 'Sub-Second Load Speed', val: '< 0.4s' },
+    { icon: '🏆', label: 'Core Web Vitals Score', val: '99/100' },
+    { icon: '🎯', label: 'High-Converting Funnels', val: '4.2x ROAS' },
+    { icon: '🚀', label: 'On-Time Project Delivery', val: '100%' },
+    { icon: '🔒', label: 'Enterprise SSL & Security', val: 'Bank-Grade' },
+    { icon: '💎', label: 'Client Retention Rate', val: '98.5%' },
   ];
 
   return (
-    <div className="metrics-ticker-section">
-      <div className="ticker-track">
-        <div className="ticker-content">
-          {tickerItems.concat(tickerItems).map((item, index) => (
-            <div key={`${item.label}-${index}`} className="ticker-item">
-              <span className="ticker-dot"></span>
-              <span className="ticker-label">{item.label}:</span>
-              <strong className="ticker-val">{item.val}</strong>
+    <div className="agency-trust-banner-section">
+      <div className="trust-banner-wrapper">
+        <div className="trust-banner-track">
+          {agencyFeatures.concat(agencyFeatures).map((item, index) => (
+            <div key={`${item.label}-${index}`} className="trust-badge-pill">
+              <span className="trust-badge-icon">{item.icon}</span>
+              <span className="trust-badge-label">{item.label}</span>
+              <span className="trust-badge-val">{item.val}</span>
             </div>
           ))}
         </div>

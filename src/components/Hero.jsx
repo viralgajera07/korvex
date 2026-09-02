@@ -3,195 +3,204 @@ import { WhatsAppIcon } from './WhatsAppIcon';
 
 const statIcons = {
   'Projects Delivered': (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
-      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+      <polyline points="2 17 12 22 22 17"></polyline>
+      <polyline points="2 12 12 17 22 12"></polyline>
     </svg>
   ),
   'Websites Launched': (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
       <line x1="8" y1="21" x2="16" y2="21"></line>
       <line x1="12" y1="17" x2="12" y2="21"></line>
     </svg>
   ),
   'Average ROAS on Ads': (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <line x1="18" y1="20" x2="18" y2="10"></line>
       <line x1="12" y1="20" x2="12" y2="4"></line>
       <line x1="6" y1="20" x2="6" y2="14"></line>
-      <path d="M4 20l16-16"></path>
+      <polyline points="4 8 10 2 14 6 20 1"></polyline>
     </svg>
   ),
   'Client Satisfaction': (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
-      <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
     </svg>
   )
 };
 
 export function Hero({ stats }) {
-  const tags = ['Startups', 'E-commerce', 'Local Businesses', 'Real Estate', 'Clinics', 'Coaches'];
+  const tags = ['Startups', 'E-Commerce', 'Local Brands', 'Real Estate', 'Clinics & Healthcare', 'Coaches & Creators'];
 
   return (
-    <section id="home" className="hero reveal hero-banner-card">
-      <div className="hero-bg-wrapper" aria-hidden="true">
-        <img
-          src="/hero-bg.jpg"
-          alt="Hero Background"
-          className="hero-bg-media"
-          onError={(e) => { e.currentTarget.src = '/hero-bg.png'; }}
-        />
-        <div className="hero-bg-overlay"></div>
-        <div className="hero-bg-grid-overlay"></div>
+    <section id="home" className="hero-studio-wrapper reveal">
+      {/* Dynamic Background Mesh Canvas */}
+      <div className="studio-hero-bg">
+        <div className="bg-glow-aura aura-green"></div>
+        <div className="bg-glow-aura aura-cyan"></div>
+        <div className="bg-dot-grid"></div>
       </div>
 
-      <div className="hero-container">
-        <div className="hero-content">
-          <span className="pill">Web Development · E-Commerce · Digital Marketing</span>
-          <h1>
-            We Build Websites That <span className="accent-text">Convert</span> &amp; Ads That <span className="accent-text">Sell</span>
+      <div className="hero-studio-container">
+        {/* Left Hero Content */}
+        <div className="hero-studio-left">
+          <div className="hero-badge-pill">
+            <span className="pulse-indicator"></span>
+            <span>Web Development · AI Models · Digital Marketing</span>
+          </div>
+
+          <h1 className="hero-studio-title">
+            We Engineer <span className="gradient-highlight">Digital Experiences</span> That Drive Revenue.
           </h1>
-          <p className="hero-lead">
-            KORVEX helps ambitious brands launch high-performance websites, e-commerce stores, and data-driven campaigns that turn visitors into paying customers.
+
+          <p className="hero-studio-lead">
+            KORVEX builds custom-coded React platforms, high-converting e-commerce stores, and performance ad campaigns engineered for speed, authority, and predictable growth.
           </p>
 
-          <div className="hero-actions">
-            <a className="btn btn-primary" href="#contact">
-              Get Free Consultation
+          <div className="hero-studio-actions">
+            <a className="btn-hero-primary" href="#contact">
+              <span>Get Free Consultation</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </a>
-            <a className="btn btn-outline" href="https://wa.me/917041457314?text=Hi%20KORVEX%2C%20I%20want%20to%20build%20a%20website%20%2F%20run%20ads%20for%20my%20business." target="_blank" rel="noreferrer">
-              <WhatsAppIcon className="btn-icon" />
-              Chat on WhatsApp
+
+            <a
+              className="btn-hero-whatsapp"
+              href="https://wa.me/917041457314?text=Hi%20KORVEX%2C%20I%20want%20to%20build%20a%20website%20%2F%20run%20ads%20for%20my%20business."
+              target="_blank"
+              rel="noreferrer"
+            >
+              <WhatsAppIcon className="wa-icon" />
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
 
-          <div className="hero-features">
-            <span className="feature-item">
-              <span className="feature-icon">✓</span> Built for Speed
-            </span>
-            <span className="feature-item">
-              <span className="feature-icon">✓</span> SEO Optimized
-            </span>
-            <span className="feature-item">
-              <span className="feature-icon">✓</span> High-Converting
-            </span>
+          <div className="hero-feature-tags">
+            <div className="feature-pill">
+              <span className="check-mark">✓</span>
+              <span>Sub-Second Load Speed</span>
+            </div>
+            <div className="feature-pill">
+              <span className="check-mark">✓</span>
+              <span>100% Custom React &amp; Vite</span>
+            </div>
+            <div className="feature-pill">
+              <span className="check-mark">✓</span>
+              <span>SEO &amp; Conversion Engine</span>
+            </div>
           </div>
 
-          <div className="trusted-by-section">
-            <span className="trusted-title">Growth partners for:</span>
-            <div className="tag-marquee" aria-label="Core client segments">
+          <div className="hero-partners-wrap">
+            <span className="partners-label">Trusted digital partner for:</span>
+            <div className="partners-pill-row">
               {tags.map((tag) => (
-                <span key={tag} className="tag-item">{tag}</span>
+                <span key={tag} className="partner-tag-item">{tag}</span>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="hero-visual">
-          <div className="browser-mockup">
-            <div className="browser-header">
-              <div className="window-dots">
-                <span className="dot red"></span>
-                <span className="dot yellow"></span>
-                <span className="dot green"></span>
+        {/* Right Hero Visual Showcase */}
+        <div className="hero-studio-right">
+          <div className="studio-mockup-frame">
+            <div className="mockup-mac-header">
+              <div className="mac-dots">
+                <span className="mac-dot red"></span>
+                <span className="mac-dot yellow"></span>
+                <span className="mac-dot green"></span>
               </div>
-              <div className="browser-address">https://korvex.co/dashboard</div>
+              <div className="mac-address-bar">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1db854" strokeWidth="3">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>https://korvex.agency/web-architecture</span>
+              </div>
             </div>
 
-            <div className="browser-content">
-              <div className="mock-dashboard">
-                <div className="dashboard-sidebar">
-                  <div className="sidebar-logo"></div>
-                  <div className="sidebar-nav">
-                    <span className="nav-item active"></span>
-                    <span className="nav-item"></span>
-                    <span className="nav-item"></span>
-                    <span className="nav-item"></span>
+            <div className="mockup-viewport">
+              <div className="studio-preview-card">
+                <div className="preview-top-bar">
+                  <div className="preview-brand">
+                    <span className="brand-dot"></span>
+                    <span className="brand-title">KORVEX WEB ENGINE</span>
+                  </div>
+                  <span className="status-badge">PRODUCTION READY</span>
+                </div>
+
+                <div className="preview-grid-stats">
+                  <div className="stat-gauge-card">
+                    <div className="stat-gauge-header">
+                      <span className="gauge-icon">⚡</span>
+                      <span className="gauge-title">Core Web Vitals</span>
+                    </div>
+                    <div className="gauge-score">99/100</div>
+                    <div className="gauge-bar-track">
+                      <div className="gauge-bar-fill" style={{ width: '99%' }}></div>
+                    </div>
+                  </div>
+
+                  <div className="stat-gauge-card">
+                    <div className="stat-gauge-header">
+                      <span className="gauge-icon">🚀</span>
+                      <span className="gauge-title">TTFB Load Speed</span>
+                    </div>
+                    <div className="gauge-score">0.38s</div>
+                    <div className="gauge-bar-track">
+                      <div className="gauge-bar-fill cyan" style={{ width: '95%' }}></div>
+                    </div>
                   </div>
                 </div>
 
-                <div className="dashboard-main">
-                  <div className="main-header">
-                    <div className="header-title"></div>
-                    <div className="header-status">Live Campaigns</div>
-                  </div>
-
-                  <div className="widgets-grid">
-                    <div className="widget-card">
-                      <div className="widget-label">Conversion Rate</div>
-                      <div className="widget-value">3.8% <span className="trend positive">+2.4%</span></div>
-                      <div className="widget-sparkline">
-                        <svg viewBox="0 0 100 30" className="sparkline-svg">
-                          <path d="M 0 25 Q 20 5 40 18 T 80 8 T 100 2" fill="none" stroke="#1db854" strokeWidth="2.5" strokeLinecap="round" />
-                          <circle cx="100" cy="2" r="3" fill="#1db854" />
-                        </svg>
-                      </div>
-                    </div>
-
-                    <div className="widget-card">
-                      <div className="widget-label">Ad Spend ROAS</div>
-                      <div className="widget-value">4.2x <span className="trend positive">Target 4x</span></div>
-                      <div className="widget-progress">
-                        <div className="progress-bar" style={{ width: '85%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="analytics-card">
-                    <div className="analytics-header">
-                      <div className="analytics-title"></div>
-                      <div className="analytics-subtitle">Sales & Conversions</div>
-                    </div>
-                    <div className="analytics-chart">
-                      <svg viewBox="0 0 300 85" className="chart-svg">
-                        <defs>
-                          <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#1db854" stopOpacity="0.25" />
-                            <stop offset="100%" stopColor="#1db854" stopOpacity="0.0" />
-                          </linearGradient>
-                        </defs>
-                        <path d="M 0 75 Q 50 40 100 50 T 200 25 T 300 12 L 300 85 L 0 85 Z" fill="url(#chart-grad)" />
-                        <path d="M 0 75 Q 50 40 100 50 T 200 25 T 300 12" fill="none" stroke="#1db854" strokeWidth="2.5" strokeLinecap="round" />
-                        <circle cx="300" cy="12" r="4" fill="#1db854" />
-                      </svg>
-                    </div>
+                <div className="preview-hero-mock">
+                  <div className="preview-mock-title"></div>
+                  <div className="preview-mock-subtitle"></div>
+                  <div className="preview-mock-tags">
+                    <span className="tech-tag">React 19</span>
+                    <span className="tech-tag">Vite</span>
+                    <span className="tech-tag">Custom CSS</span>
+                    <span className="tech-tag">SEO Schema</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating Glass Widgets */}
-            <div className="floating-widget glass-sales">
-              <span className="f-icon">💰</span>
-              <div className="f-info">
-                <span className="f-label">Sales Revenue</span>
-                <span className="f-value">$12,450.00</span>
+            {/* Floating Badges */}
+            <div className="floating-badge badge-top">
+              <div className="badge-icon-box">⚡</div>
+              <div className="badge-text-box">
+                <span className="badge-title">Sub-Second Speed</span>
+                <span className="badge-value">99/100 Core Web Vitals</span>
               </div>
             </div>
 
-            <div className="floating-widget glass-leads">
-              <span className="f-icon">🚀</span>
-              <div className="f-info">
-                <span className="f-label">Conversion Growth</span>
-                <span className="f-value">+324% this month</span>
+            <div className="floating-badge badge-bottom">
+              <div className="badge-icon-box cyan">📈</div>
+              <div className="badge-text-box">
+                <span className="badge-title">ROAS &amp; Sales Lift</span>
+                <span className="badge-value">+4.2x Client Revenue</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="hero-stats-wrap">
-        <div className="hero-stats">
+      {/* Bottom Counter Bar */}
+      <div className="hero-stats-banner">
+        <div className="hero-stats-grid">
           {stats.map((stat) => (
-            <div key={stat.label} className="stat-card">
-              <div className="stat-icon-wrapper">
+            <div key={stat.label} className="studio-stat-card">
+              <div className="studio-stat-icon">
                 {statIcons[stat.label] || (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="stat-icon-svg">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <circle cx="12" cy="12" r="10"></circle>
                   </svg>
                 )}
               </div>
-              <div className="stat-content">
+              <div className="studio-stat-info">
                 <strong>
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </strong>

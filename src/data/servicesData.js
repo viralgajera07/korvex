@@ -82,16 +82,14 @@ export const servicesData = [
     description: 'Custom AI models, predictive analytics, and automated intelligent systems built for modern business scale.',
     fullDescription: 'Unlock intelligent automation and deep data insights tailored to your industry. From computer vision and natural language processing to real-time predictive analytics and conversational AI agents, KORVEX builds enterprise-grade AI algorithms designed to streamline workflows and unlock new growth vectors.',
     bullets: [
-      'Object Recognition',
-      'Data Analytics',
-      'Text-to-Speech',
-      'Recommendation Engine',
-      'Business Intelligence',
-      'Sentimental Analysis',
-      'Data Forecasting',
-      'Conversational AI',
-      'Natural Language Processing',
-      'Machine Learning'
+      'Machine Learning & Neural Network Models',
+      'Natural Language Processing & LLM Integration',
+      'Conversational AI & Autonomous Support Agents',
+      'Computer Vision & Object Recognition Systems',
+      'Predictive Analytics & Data Forecasting Engines',
+      'Custom Real-Time Recommendation Engines',
+      'Speech Synthesis & Voice Processing Pipelines',
+      'Enterprise Business Intelligence & KPI Dashboards'
     ],
     benefits: [
       { title: 'Automated Operations', desc: 'Eliminate repetitive manual processes with self-learning AI agents and workflows.' },
@@ -158,11 +156,12 @@ export const servicesData = [
     bullets: [
       'High-Converting Ad Copy & Creative Design',
       'Laser-Focused Audience Sourcing & Lookalikes',
-      'A/B Creative & Angle Testing',
-      'Meta Pixel & Conversions API Setup',
+      'A/B Creative & Value Angle Testing',
+      'Meta Pixel & Conversions API (CAPI) Setup',
       'Retargeting Funnels & Custom Audiences',
       'ROAS & Cost-Per-Acquisition Optimization',
-      'Weekly transparent Performance Reports'
+      'Dynamic Product Ads (DPA) & Catalog Sales',
+      'Weekly Transparent Performance Dashboards'
     ],
     benefits: [
       { title: 'Scalable Revenue', desc: 'Systematic creative testing that identifies winning ad formats to scale budget profitably.' },
@@ -191,13 +190,14 @@ export const servicesData = [
     description: 'Strategic content and community growth that builds brand presence and trust.',
     fullDescription: 'Build an organic social presence that converts followers into loyal brand advocates. We handle social content calendars, brand positioning, short-form video strategies, and community interaction across Instagram, LinkedIn, and major platforms.',
     bullets: [
-      'Social Content Strategy & Planning',
-      'Custom Graphic Design & Video Reels',
-      'Brand Tone & Voice Definition',
+      'Social Content Strategy & Editorial Planning',
+      'Custom Graphic Design & High-Retention Reels',
+      'Brand Tone, Visual Identity & Voice System',
       'Audience Engagement & Community Management',
-      'Profile Optimization & Visual Branding',
-      'Hashtag & Growth Strategy',
-      'Monthly Content Analytics Reports'
+      'Profile Optimization & Visual Grid Branding',
+      'Data-Backed Hashtag & Reach Strategy',
+      'Influencer Collaborations & Creator Outreach',
+      'Monthly Content Performance Analytics Reports'
     ],
     benefits: [
       { title: 'Elevated Brand Trust', desc: 'Polished visual presence that communicates market leadership and credibility.' },
@@ -226,13 +226,14 @@ export const servicesData = [
     description: 'Reliable management after launch to keep your website and ads performing smoothly.',
     fullDescription: 'Maintain peak web performance and data visibility long after launch. We provide ongoing proactive server maintenance, speed optimization, security audits, database cleanups, and custom business reporting dashboards.',
     bullets: [
-      'Website Uptime & Server Monitoring',
-      'Core Web Vitals & Speed Optimization',
-      'Security Audits & Malware Protection',
-      'Automated Backups & Disaster Recovery',
-      'Google Analytics 4 & Tag Manager Setup',
-      'Custom KPI Dashboards',
-      'Regular Framework & Plugin Updates'
+      '24/7 Website Uptime & Server Health Monitoring',
+      'Core Web Vitals & Speed Optimization Sprints',
+      'Security Audits, Malware Scanning & SSL Defense',
+      'Automated Cloud Backups & Instant Recovery',
+      'Google Analytics 4 & Tag Manager Event Setup',
+      'Custom KPI Dashboards & Conversion Tracking',
+      'Regular Framework, Library & Security Updates',
+      'Proactive Database Cleanup & Cache Tuning'
     ],
     benefits: [
       { title: 'Zero Downtime Worries', desc: '24/7 server monitoring and rapid response to maintain non-stop website availability.' },
@@ -261,13 +262,14 @@ export const servicesData = [
     description: 'A focused roadmap that aligns your website, funnel, and ad spend around one goal.',
     fullDescription: 'Stop guessing your next growth move. We conduct comprehensive audits of your digital sales funnels, user retention channels, and acquisition costs to engineer a step-by-step roadmap that scales revenue predictably.',
     bullets: [
-      'Full Funnel Architecture & Audit',
-      'Conversion Rate Optimization (CRO)',
+      'Full Sales Funnel Architecture & Leak Audit',
+      'Conversion Rate Optimization (CRO) Framework',
       'Customer Acquisition Cost (CAC) Reduction',
-      'Lifetime Value (LTV) Retention Strategies',
-      'Competitor Benchmarking & Positioning',
-      'Quarterly Expansion Milestones',
-      'Dedicated Growth Architect Consultation'
+      'Lifetime Value (LTV) Retention Funnels',
+      'Competitor Benchmarking & Market Positioning',
+      'Quarterly Expansion Roadmaps & Milestones',
+      'Dedicated Growth Architect Strategic Syncs',
+      'Omnichannel Revenue Attribution Modeling'
     ],
     benefits: [
       { title: 'Clear Growth Roadmap', desc: 'A structured blueprint prioritizing high-impact growth initiatives.' },

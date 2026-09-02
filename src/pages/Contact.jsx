@@ -80,13 +80,6 @@ export function Contact() {
                   <a href="https://wa.me/917041457314" target="_blank" rel="noreferrer">+91 70414 57314</a>
                 </div>
               </li>
-              <li>
-                <span className="detail-icon">📍</span>
-                <div>
-                  <strong>Surat Office</strong>
-                  <p>235, Apple Square, Near Swastic Plaza, Yogichowk, Nana Varachha, Surat - 395010</p>
-                </div>
-              </li>
             </ul>
           </div>
         </div>

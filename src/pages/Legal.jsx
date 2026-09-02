@@ -215,7 +215,7 @@ export function Legal() {
               <section className="doc-section">
                 <h3>7. Governing Law &amp; Jurisdiction</h3>
                 <p>
-                  These Terms of Service are governed by and construed in accordance with the laws of India. Any legal disputes arising out of these terms shall be subject to the exclusive jurisdiction of the courts in Surat, Gujarat, India.
+                  These Terms of Service are governed by and construed in accordance with the laws of India. Any legal disputes arising out of these terms shall be subject to the exclusive jurisdiction of the competent courts in India.
                 </p>
               </section>
             </article>

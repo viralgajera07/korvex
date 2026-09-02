@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
+import { ServiceIcon } from './ServiceIcon';
 
 export function Services() {
   return (
@@ -18,16 +19,18 @@ export function Services() {
             <Link to={`/services/${item.slug}`} className="service-card-top-link">
               <div className="service-card-top">
                 <span className="service-number-badge">{item.number}</span>
-                <span className="service-emoji-icon">{item.icon}</span>
+                <div className="service-icon-wrapper">
+                  <ServiceIcon slug={item.slug} />
+                </div>
               </div>
               <h3 className="service-card-title">{item.title}</h3>
               <p className="service-card-desc">{item.description}</p>
             </Link>
 
-            <ul className={`service-bullets-list ${item.bullets.length > 4 ? 'grid-bullets' : ''}`}>
+            <ul className="service-bullets-list">
               {item.bullets.map((bullet) => (
                 <li key={bullet}>
-                  <svg className="service-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="service-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                   <span>{bullet}</span>

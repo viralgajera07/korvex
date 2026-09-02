@@ -9,60 +9,41 @@ export function Careers() {
 
   const jobs = [
     {
-      title: 'UI/UX Designer (Fresher)',
-      department: 'Design',
-      location: 'Remote (India) / Surat',
+      title: 'Sales Executive / Sales Person',
+      department: 'Sales & Revenue',
+      location: 'Remote',
       type: 'Full-time',
-      desc: 'Create modern, user-friendly UI/UX designs for web and mobile applications.',
+      desc: 'Drive client acquisition, pitch website development and digital marketing services to prospective business owners.',
       responsibilities: [
-        'Design website banners and social media creatives, including Instagram posts.',
-        'Create modern, user-friendly UI/UX designs for web and mobile applications.',
-        'Collaborate with the development team to deliver visually appealing digital experiences.'
+        'Identify and generate leads for custom website development, e-commerce, and paid advertising services.',
+        'Conduct sales calls, present project proposals, and close service contracts with clients.',
+        'Follow up on inbound inquiries and manage active sales pipelines.',
+        'Work closely with client founders to understand business needs and recommend tailored agency solutions.'
       ],
       requirements: [
-        'Basic knowledge of Figma, Adobe Photoshop, or Adobe Illustrator.',
-        'A strong sense of design, typography, color theory, and layout.',
-        'Creativity, attention to detail, and a willingness to learn.',
-        'Freshers are encouraged to apply.'
+        'Proven track record in B2B sales, agency sales, or IT service selling.',
+        'Excellent verbal communication, presentation, and closing skills.',
+        'Strong understanding of digital services (Websites, Shopify, Meta/Google Ads).',
+        'Target-driven mindset with high motivation and self-discipline.'
       ]
     },
     {
-      title: 'Full Stack Developer',
-      department: 'Engineering',
-      location: 'Remote (India) / Surat',
+      title: 'Business Development Executive (BDE)',
+      department: 'Business Development',
+      location: 'Remote',
       type: 'Full-time',
-      desc: 'Develop and maintain full-stack React-based web applications.',
+      desc: 'Identify new business opportunities, build outbound pipelines, and establish strategic partnerships to scale agency growth.',
       responsibilities: [
-        'Develop and maintain full-stack web applications.',
-        'Build responsive user interfaces and scalable backend systems.',
-        'Integrate APIs, databases, and third-party services.',
-        'Collaborate with designers and other developers to deliver high-quality solutions.'
+        'Research market sectors, discover prospective client opportunities, and execute targeted outreach.',
+        'Build outbound pipelines via cold email, LinkedIn networking, and strategic outreach.',
+        'Scope client project requirements with technical leads and prepare customized proposals.',
+        'Establish long-term relationships with brand owners, enterprise clients, and growth partners.'
       ],
       requirements: [
-        'Strong knowledge of React.js, Node.js, Express.js, and MongoDB.',
-        'Experience with REST APIs, Git, and modern JavaScript (ES6+).',
-        'Understanding of responsive design, performance optimization, and clean coding practices.',
-        'Strong problem-solving and communication skills.'
-      ]
-    },
-    {
-      title: 'PHP Developer',
-      department: 'Engineering',
-      location: 'Surat Office',
-      type: 'Full-time',
-      desc: 'Develop, maintain, and optimize PHP/Laravel-based web applications.',
-      responsibilities: [
-        'Develop, maintain, and optimize PHP-based web applications.',
-        'Build and integrate APIs, databases, and backend functionality.',
-        'Troubleshoot, debug, and improve application performance.',
-        'Work closely with the development team to deliver reliable and scalable solutions.'
-      ],
-      requirements: [
-        'Strong knowledge of PHP and MySQL.',
-        'Experience with frameworks such as Laravel or CodeIgniter is preferred.',
-        'Understanding of HTML, CSS, JavaScript, and REST APIs.',
-        'Familiarity with Git and modern web development practices.',
-        'Strong analytical and problem-solving skills.'
+        '1+ years of experience as a Business Development Executive in an IT or Marketing Agency setup.',
+        'Strong lead generation, cold outreach, and client relationship management capabilities.',
+        'Familiarity with agency service workflows (Web Dev, AI, Performance Ads).',
+        'Goal-oriented with strong analytical and negotiation skills.'
       ]
     }
   ];
@@ -83,9 +64,9 @@ export function Careers() {
     <div className="careers-page reveal visible">
       <div className="careers-header text-center">
         <span className="pill">We Are Hiring</span>
-        <h1>Build the future of digital engineering with KORVEX.</h1>
+        <h1>Drive business expansion &amp; growth with KORVEX.</h1>
         <p className="lead-text">
-          We want individuals who are passionate about writing clean code, building responsive interfaces, and driving growth metrics.
+          We are looking for result-oriented Sales Professionals and Business Development Executives (BDE) to expand our market reach and build lasting client relationships.
         </p>
       </div>
 
@@ -167,7 +148,7 @@ export function Careers() {
               <div className="form-success-state text-center">
                 <span className="success-icon">🎉</span>
                 <h3>Application Submitted!</h3>
-                <p>Thank you for applying for the <strong>{applyJob.title}</strong> position. Our engineering team will review your application and contact you via email or WhatsApp within 3 business days.</p>
+                <p>Thank you for applying for the <strong>{applyJob.title}</strong> position. Our hiring team will review your application and contact you via email or WhatsApp within 3 business days.</p>
                 <button className="btn btn-primary" onClick={() => setApplyJob(null)}>Close Window</button>
               </div>
             ) : (
