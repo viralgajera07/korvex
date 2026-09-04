@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 export function Blog() {
-  const [activeArticle, setActiveArticle] = useState(null);
   const [filter, setFilter] = useState('All');
 
   const categories = ['All', 'Web Dev', 'Paid Ads', 'Strategy'];
@@ -180,7 +179,6 @@ export function Blog() {
   ];
 
   const featuredPost = posts.find((p) => p.featured);
-  const regularPosts = posts.filter((p) => !p.featured);
 
   const filteredPosts = filter === 'All'
     ? posts
@@ -220,7 +218,6 @@ export function Blog() {
         <section className="featured-blog-spotlight">
           <article 
             className="featured-post-card glass-card"
-            onClick={() => setActiveArticle(featuredPost)}
           >
             <div className="featured-post-badge">⭐ Spotlight Article</div>
             <div className="featured-post-grid">
@@ -266,7 +263,6 @@ export function Blog() {
             <article 
               key={post.id} 
               className="info-card blog-post-card"
-              onClick={() => setActiveArticle(post)}
             >
               <div className="bp-card-banner" style={{ background: post.coverGradient }}>
                 <span className="bp-cat-badge">{post.category}</span>
@@ -282,51 +278,12 @@ export function Blog() {
               </div>
               <div className="bp-footer">
                 <span className="bp-author-role">{post.authorRole}</span>
-                <span className="bp-link">Read Article →</span>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      {/* Article Detail Modal / Reader */}
-      {activeArticle && (
-        <div className="modal-overlay" onClick={() => setActiveArticle(null)}>
-          <div className="modal-content glass-card blog-reader-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setActiveArticle(null)} aria-label="Close modal">×</button>
-            <div className="blog-reader-header">
-              <div className="reader-meta-row">
-                <span className="pill">{activeArticle.category}</span>
-                <span className="bp-time-header">{activeArticle.readTime} · {activeArticle.date}</span>
-              </div>
-              <h2>{activeArticle.title}</h2>
-              <div className="reader-author-bar">
-                <div className="author-avatar">{activeArticle.author.charAt(0)}</div>
-                <div>
-                  <strong>{activeArticle.author}</strong>
-                  <span className="author-sub">{activeArticle.authorRole} at KORVEX</span>
-                </div>
-              </div>
-            </div>
-            <hr className="blog-divider" />
-            <div className="blog-reader-body">
-              {activeArticle.content}
-            </div>
-            <div className="blog-reader-footer text-center">
-              <h4>Ready to apply these strategies to your brand?</h4>
-              <p>Let's audit your site performance or design a high-converting Meta ad funnel for your business.</p>
-              <div className="footer-modal-actions">
-                <a href="#contact" className="btn btn-primary" onClick={() => setActiveArticle(null)}>
-                  Get Free Consultation
-                </a>
-                <a href="https://wa.me/917041457314" target="_blank" rel="noreferrer" className="btn btn-outline">
-                  Chat on WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -57,6 +57,7 @@ export function Navbar({ scrolled, mobileOpen, setMobileOpen }) {
     { label: 'About', href: '/about' },
     { label: 'Careers', href: '/careers' },
     { label: 'Blog', href: '/blog' },
+    { label: 'Contact Us', href: '/contact' },
   ];
 
   return (
@@ -158,6 +159,7 @@ export function Navbar({ scrolled, mobileOpen, setMobileOpen }) {
             onClick={() => { setMobileOpen(!mobileOpen); setServicesOpen(false); }}
             aria-label="Toggle menu"
           >
+            <span className={`bar ${mobileOpen ? 'open' : ''}`}></span>
             <span className={`bar ${mobileOpen ? 'open' : ''}`}></span>
             <span className={`bar ${mobileOpen ? 'open' : ''}`}></span>
           </button>
