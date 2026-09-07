@@ -34,6 +34,7 @@ export function Footer() {
             <li><Link to="/services/ai-ml-development">AI &amp; ML Development</Link></li>
             <li><Link to="/services/app-development">App Development</Link></li>
             <li><Link to="/services/meta-ads-management">Meta Ads Management</Link></li>
+            <li><Link to="/services/chatgpt-ads">ChatGPT Ads</Link></li>
             <li><Link to="/services/social-media-marketing">Social Media Marketing</Link></li>
             <li><Link to="/services/analytics-maintenance">Analytics &amp; Maintenance</Link></li>
             <li><Link to="/services/growth-strategy">Growth Strategy</Link></li>

@@ -53,6 +53,13 @@ export function ServiceIcon({ slug, className = "service-svg-icon", width = 22, 
           <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
         </svg>
       );
+    case 'chatgpt-ads':
+      return (
+        <svg className={className} width={width} height={height} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          <path d="M12 7l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z"></path>
+        </svg>
+      );
     case 'social-media-marketing':
     case 'social-marketing':
       return (

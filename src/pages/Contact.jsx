@@ -15,7 +15,9 @@ export function Contact() {
     { value: 'ecom', label: 'E-Commerce Store' },
     { value: 'aiml', label: 'AI & ML Development' },
     { value: 'app', label: 'App Development' },
-    { value: 'ads', label: 'Meta & Google Ads' },
+    { value: 'ads', label: 'Meta Ads Management' },
+    { value: 'chatgpt-ads', label: 'ChatGPT Ads' },
+    { value: 'social', label: 'Social Media Marketing' },
     { value: 'all', label: 'Full Scale Growth Funnel' },
   ];
 

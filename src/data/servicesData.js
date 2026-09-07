@@ -180,9 +180,45 @@ export const servicesData = [
     ]
   },
   {
+    slug: 'chatgpt-ads',
+    id: 'chatgpt-ads',
+    number: '06',
+    icon: '💬',
+    title: 'ChatGPT Ads',
+    heroTitle: 'Conversational AI Advertising & High-Intent ChatGPT Sponsored Placements',
+    tagline: 'Position your brand directly inside AI search queries and high-intent buyer conversations on ChatGPT.',
+    description: 'High-intent conversational ad campaigns and sponsored AI placements engineered for high conversion.',
+    fullDescription: 'Be the answer when your target buyers ask ChatGPT for recommendations. KORVEX manages end-to-end ChatGPT advertising and generative AI search campaigns—engineering high-intent prompt targeting, sponsored answer placements, multi-touch attribution, and conversational funnels that convert AI discovery into profitable revenue.',
+    bullets: [
+      'Conversational Search & Intent Prompt Targeting',
+      'ChatGPT Sponsored Citations & Answer Placements',
+      'Generative Engine Optimization (GEO) & Brand Sourcing',
+      'High-Converting AI Landing Funnels & Attribution',
+      'Conversational Creative & Prompt-Ad Copywriting',
+      'Competitor Intercept & Category Share of Voice',
+      'Real-Time Conversion Tracking & Webhook Sync',
+      'Weekly Intent Query Analytics & ROAS Reporting'
+    ],
+    benefits: [
+      { title: 'Peak Buyer Intent', desc: 'Engage qualified prospects at the exact moment they ask AI for product and service recommendations.' },
+      { title: 'First-Mover Market Advantage', desc: 'Secure category dominance in emerging AI search channels before competitors bid up acquisition costs.' },
+      { title: 'Closed-Loop Conversion Attribution', desc: 'Seamless tracking connecting conversational AI referral traffic directly to CRM leads, sales, and ROAS.' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Prompt & Intent Discovery', desc: 'Auditing conversational search queries, commercial prompts, and category positioning across generative AI models.' },
+      { step: '02', title: 'Ad Strategy & Funnel Mapping', desc: 'Drafting conversational sponsored placements, context-rich ad copy, and high-converting landing paths.' },
+      { step: '03', title: 'Campaign Setup & Launch', desc: 'Configuring targeting parameters, tracking webhooks, server-side pixels, and deploying AI ad placements.' },
+      { step: '04', title: 'Attribution & Scale', desc: 'Analyzing prompt-level attribution data, refining answer citations, and scaling high-performing conversion funnels.' }
+    ],
+    faqs: [
+      { q: 'How do ChatGPT Ads work?', a: 'ChatGPT and generative AI search engines display sponsored recommendations, cited sources, and contextually relevant brand placements when users ask questions with commercial or problem-solving intent.' },
+      { q: 'How do you measure conversions from ChatGPT ads?', a: 'We implement custom UTM tracking parameters, server-side attribution, and CRM webhook integrations to trace conversions directly from AI referral traffic to closed sales.' }
+    ]
+  },
+  {
     slug: 'social-media-marketing',
     id: 'social-marketing',
-    number: '06',
+    number: '07',
     icon: '📲',
     title: 'Social Media Marketing',
     heroTitle: 'Strategic Brand Presence & Community Engagement That Drives Trust',
@@ -218,7 +254,7 @@ export const servicesData = [
   {
     slug: 'analytics-maintenance',
     id: 'analytics-maint',
-    number: '07',
+    number: '08',
     icon: '📊',
     title: 'Analytics & Maintenance',
     heroTitle: 'Continuous Performance Monitoring, Security & Growth Maintenance',
@@ -254,7 +290,7 @@ export const servicesData = [
   {
     slug: 'growth-strategy',
     id: 'growth-strat',
-    number: '08',
+    number: '09',
     icon: '🚀',
     title: 'Growth Strategy',
     heroTitle: 'Data-Backed Growth Roadmaps to Scale Revenue & Maximize LTV',

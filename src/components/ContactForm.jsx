@@ -104,7 +104,9 @@ export function ContactForm() {
                   { value: 'E-commerce Store', label: 'E-commerce' },
                   { value: 'AI & ML Development', label: 'AI & ML Development' },
                   { value: 'App Development', label: 'App Development' },
-                  { value: 'Digital Marketing', label: 'Digital Marketing' },
+                  { value: 'Meta Ads Management', label: 'Meta Ads Management' },
+                  { value: 'ChatGPT Ads', label: 'ChatGPT Ads' },
+                  { value: 'Social Media Marketing', label: 'Social Media Marketing' },
                   { value: 'Full Scale Growth Funnel', label: 'Both' },
                 ]}
                 value={formData.service}
