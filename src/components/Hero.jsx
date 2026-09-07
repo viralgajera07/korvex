@@ -46,11 +46,6 @@ export function Hero({ stats }) {
       <div className="hero-studio-container">
         {/* Left Hero Content */}
         <div className="hero-studio-left">
-          <div className="hero-badge-pill">
-            <span className="pulse-indicator"></span>
-            <span>Web Development · AI Models · Digital Marketing</span>
-          </div>
-
           <h1 className="hero-studio-title">
             We Engineer <span className="gradient-highlight">Digital Experiences</span> That Drive Revenue.
           </h1>
@@ -117,7 +112,7 @@ export function Hero({ stats }) {
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1db854" strokeWidth="3">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
-                <span>https://korvex.agency/web-architecture</span>
+                <span>https://korvexsolutions.info/web-architecture</span>
               </div>
             </div>
 

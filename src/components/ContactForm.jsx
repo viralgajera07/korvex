@@ -43,7 +43,6 @@ export function ContactForm() {
     <section id="contact" className="section reveal">
       <div className="contact-shell">
         <div className="contact-copy">
-          <span className="section-label">Ready to Build or Scale?</span>
           <h2>Ready to build your website or scale your ads?</h2>
           <p>Book a free 30-minute consultation with our team and let’s map your next growth move.</p>
           <div className="cta-row">

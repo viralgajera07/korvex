@@ -6,7 +6,6 @@ export function Services() {
   return (
     <section id="services" className="services-section-wrapper reveal">
       <div className="section-heading text-center">
-        <span className="section-label">What We Do</span>
         <h2>Premium digital services for brands that want faster growth.</h2>
         <p className="services-lead-desc">
           From custom websites and AI/ML architecture to paid acquisition, click on any service below to explore its dedicated page and technical capabilities.

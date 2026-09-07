@@ -52,7 +52,6 @@ export function Process() {
   return (
     <section className="section reveal">
       <div className="section-heading text-center">
-        <span className="section-label">How We Work</span>
         <h2>A simple, transparent process that keeps momentum high.</h2>
         <p className="lead-text" style={{ margin: '0.75rem auto 0' }}>
           From initial blueprint to live scale, we follow a rigorous, optimized framework to launch and grow your digital assets.

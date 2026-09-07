@@ -53,7 +53,6 @@ export function Contact() {
   return (
     <div className="contact-page reveal visible">
       <div className="contact-header text-center">
-        <span className="pill">Contact Us</span>
         <h1>Ready to build your website or scale your ads?</h1>
         <p className="lead-text">
           Reach out through the contact form or connect with us directly.

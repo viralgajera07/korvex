@@ -120,7 +120,6 @@ export function About() {
   return (
     <div className="about-page reveal visible">
       <div className="about-header text-center">
-        <span className="pill">About KORVEX</span>
         <h1>We merge engineering with performance marketing.</h1>
         <p className="lead-text">
           KORVEX was built to bridge the gap between design agencies that don't understand marketing and marketing agencies that can't build clean software.
@@ -148,7 +147,6 @@ export function About() {
 
       <section className="values-section">
         <div className="section-heading text-center">
-          <span className="section-label">Our Core Values</span>
           <h2>The principles guiding our work.</h2>
         </div>
         <div className="card-grid values-grid">
@@ -164,7 +162,6 @@ export function About() {
 
       <section className="timeline-section">
         <div className="section-heading text-center">
-          <span className="section-label">Our Journey</span>
           <h2>How we got here.</h2>
         </div>
         <div className="timeline-container">
@@ -183,7 +180,6 @@ export function About() {
       {/* Modern Premium Partners Showcase Section */}
       <section className="partners-section">
         <div className="section-heading text-center">
-          <span className="section-label pill-accent">Strategic Ecosystem</span>
           <h2>Powered by World-Class Partners</h2>
           <p className="lead-text">
             We collaborate with industry-leading technology platforms and strategic innovators to engineer seamless, high-converting digital ecosystems.

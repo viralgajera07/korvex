@@ -41,7 +41,6 @@ export function Testimonials() {
   return (
     <section className="section reveal testimonials-creative">
       <div className="section-heading text-center">
-        <span className="section-label">Client Stories &amp; Proof</span>
         <h2>Trusted by Founders &amp; High-Growth Leaders</h2>
         <p className="lead-text" style={{ margin: '0.75rem auto 0' }}>
           Here is what happens when speed, design excellence, and targeted paid strategy come together.

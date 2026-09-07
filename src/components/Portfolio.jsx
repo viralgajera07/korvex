@@ -45,7 +45,6 @@ export function Portfolio() {
   return (
     <section className="section reveal portfolio-creative">
       <div className="section-heading text-center">
-        <span className="section-label">Proven Results &amp; Impact</span>
         <h2>Case Studies &amp; Success Stories</h2>
         <p className="lead-text" style={{ margin: '0.75rem auto 0' }}>
           Real growth data from client campaigns and custom website launches.

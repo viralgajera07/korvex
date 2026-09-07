@@ -44,7 +44,6 @@ export function WhyUs() {
   return (
     <section id="about" className="section reveal why-us-creative">
       <div className="section-heading text-center">
-        <span className="section-label">Built for Speed, Scale &amp; Trust</span>
         <h2>Why Ambitious Brands Partner With KORVEX</h2>
         <p className="lead-text" style={{ margin: '0.75rem auto 0' }}>
           We eliminate project friction, slow load times, and wasted ad spend with an engineering-first digital growth approach.

@@ -63,7 +63,6 @@ export function Careers() {
   return (
     <div className="careers-page reveal visible">
       <div className="careers-header text-center">
-        <span className="pill">We Are Hiring</span>
         <h1>Drive business expansion &amp; growth with KORVEX.</h1>
         <p className="lead-text">
           We are looking for result-oriented Sales Professionals and Business Development Executives (BDE) to expand our market reach and build lasting client relationships.

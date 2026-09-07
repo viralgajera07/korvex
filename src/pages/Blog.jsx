@@ -188,7 +188,6 @@ export function Blog() {
     <div className="blog-page reveal visible">
       {/* Subpage Header */}
       <div className="blog-header text-center">
-        <span className="pill">Insights &amp; Growth Playbooks</span>
         <h1>Growth Marketing &amp; Web Engineering Insights</h1>
         <p className="lead-text">
           Actionable frameworks, code optimizations, and performance ad strategies straight from the KORVEX engineering team.

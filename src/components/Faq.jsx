@@ -31,7 +31,6 @@ export function Faq() {
     <section className="section faq-section-container reveal">
       <div className="faq-section-wrapper">
         <div className="section-heading text-center">
-          <span className="section-label">Questions, Answered</span>
           <h2>Everything you need to know before you begin.</h2>
           <p className="faq-lead-desc">
             Got questions about timelines, process, or support? We've got clear answers to help you get started with confidence.

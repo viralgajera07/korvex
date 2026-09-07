@@ -35,7 +35,6 @@ export function Legal() {
     <div className="legal-page reveal visible">
       {/* Hero Header */}
       <div className="legal-header text-center">
-        <span className="pill">KORVEX Governance &amp; Compliance</span>
         <h1>Legal &amp; Policy Center</h1>
         <p className="lead-text">
           Transparent, fair, and clear guidelines protecting your business, privacy, and infrastructure when working with KORVEX Digital Agency.
@@ -136,7 +135,6 @@ export function Legal() {
           {/* TAB 1: TERMS OF SERVICE */}
           {activeTab === 'terms' && (
             <article className="policy-doc">
-              <div className="doc-badge">Official Agreement</div>
               <h2>Terms of Service</h2>
               <p className="doc-intro">
                 Welcome to KORVEX Digital Agency ("KORVEX", "we", "us", or "our"). These Terms of Service govern your access to and use of our website, web development services, custom e-commerce software, Meta/Google ad campaign management, and digital marketing consulting. By entering into an agreement with KORVEX or using our website, you agree to comply with these terms.
@@ -224,7 +222,6 @@ export function Legal() {
           {/* TAB 2: PRIVACY POLICY */}
           {activeTab === 'privacy' && (
             <article className="policy-doc">
-              <div className="doc-badge">Data Protection</div>
               <h2>Privacy Policy</h2>
               <p className="doc-intro">
                 At KORVEX Digital Agency, protecting your personal data and business confidentiality is fundamental. This Privacy Policy outlines how we collect, store, process, and protect your information when you interact with our website (korvex.in / localhost) or utilize our digital services.
@@ -306,7 +303,6 @@ export function Legal() {
           {/* TAB 3: REFUND POLICY */}
           {activeTab === 'refund' && (
             <article className="policy-doc">
-              <div className="doc-badge">Financial Terms</div>
               <h2>Refund Policy</h2>
               <p className="doc-intro">
                 KORVEX strives for 100% client satisfaction on every custom project. Because our services involve dedicated engineering hours, strategy, design work, and cloud infrastructure setup, the following refund guidelines govern our project commitments.
@@ -363,7 +359,6 @@ export function Legal() {
           {/* TAB 4: SECURITY & UPTIME */}
           {activeTab === 'security' && (
             <article className="policy-doc">
-              <div className="doc-badge">Reliability &amp; Safety</div>
               <h2>Security &amp; Uptime Policy</h2>
               <p className="doc-intro">
                 KORVEX builds software and web infrastructure engineered for high availability, enterprise-grade data protection, and top-tier security standards. Here is how we ensure your applications remain fast, safe, and online 24/7/365.

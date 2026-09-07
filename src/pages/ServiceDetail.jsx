@@ -115,7 +115,6 @@ export function ServiceDetail() {
       {/* Capabilities / Features Grid */}
       <section id="capabilities" className="sd-capabilities-section">
         <div className="section-heading text-center">
-          <span className="section-label">Core Capabilities</span>
           <h2>What We Build &amp; Deliver in {service.title}</h2>
           <p>End-to-end technical execution tailored around your modern business requirements.</p>
         </div>
@@ -141,7 +140,6 @@ export function ServiceDetail() {
       {service.benefits && service.benefits.length > 0 && (
         <section className="sd-benefits-section">
           <div className="section-heading text-center">
-            <span className="section-label">Strategic Value</span>
             <h2>Why Brands Choose Our {service.title}</h2>
           </div>
 
@@ -161,7 +159,6 @@ export function ServiceDetail() {
       {service.processSteps && (
         <section className="sd-process-section">
           <div className="section-heading text-center">
-            <span className="section-label">Execution Blueprint</span>
             <h2>Our 4-Step Delivery Process</h2>
             <p>A proven roadmap engineered for rapid turnaround and bulletproof execution.</p>
           </div>
@@ -182,7 +179,6 @@ export function ServiceDetail() {
       {service.faqs && service.faqs.length > 0 && (
         <section className="sd-faq-section">
           <div className="section-heading text-center">
-            <span className="section-label">Questions &amp; Answers</span>
             <h2>Frequently Asked Questions</h2>
           </div>
 
@@ -201,7 +197,6 @@ export function ServiceDetail() {
       <section id="book-consultation" className="sd-contact-cta-section">
         <div className="sd-contact-shell glass-card">
           <div className="sd-contact-copy">
-            <span className="section-label">Get Started</span>
             <h2>Ready to transform your business with {service.title}?</h2>
             <p>Book a free 30-minute technical consultation with our solution architects. We will evaluate your scope and map a clear execution path.</p>
             <div className="sd-direct-contact">
@@ -300,7 +295,6 @@ export function ServiceDetail() {
       {/* Explore Other Services */}
       <section className="sd-other-services">
         <div className="section-heading text-center">
-          <span className="section-label">Explore Capabilities</span>
           <h2>Other Services by KORVEX</h2>
         </div>
 

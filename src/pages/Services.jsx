@@ -6,7 +6,6 @@ export function Services() {
   return (
     <div className="services-page reveal visible">
       <div className="services-header text-center">
-        <span className="pill">What We Do</span>
         <h1>We design platforms and acquisition systems that grow revenue.</h1>
         <p className="lead-text">
           No generic templates or meaningless reports. Click on any service below to open its dedicated page with complete capabilities, execution blueprints, and consultation options.

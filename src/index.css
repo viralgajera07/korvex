@@ -328,17 +328,17 @@ label { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
 
 /* ─── Main Padding & Layout ───────────────────────────────────────────── */
 main {
-  padding: 5.5rem max(1.5rem, calc((100% - 1400px) / 2)) 4rem;
+  padding: 68px max(1.5rem, calc((100% - 1400px) / 2)) 4rem;
   min-height: calc(100vh - 80px);
   background: var(--bg);
 }
 
 /* ─── Section Common ──────────────────────────────────────────────────── */
 .section {
-  padding: 4rem 0;
+  padding: 0;
   background: transparent;
   border-radius: 0;
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 70px 0;
 }
 
 .section-heading {
@@ -364,7 +364,7 @@ main {
   z-index: 1;
   width: 100%;
   max-width: 1380px;
-  margin: 3rem auto;
+  margin: 0 auto 70px auto;
   padding: 0 1.5rem;
   box-sizing: border-box;
 }
@@ -450,7 +450,6 @@ main {
   background: rgba(29, 184, 84, 0.1) !important;
   border: 1px solid rgba(29, 184, 84, 0.18) !important;
   color: #34d399 !important;
-  margin-left: auto;
 }
 
 .service-bullets-list {
@@ -1024,8 +1023,8 @@ main {
 
 /* Subtle section separator lines */
 .section + .section {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 4rem;
+  border-top: none;
+  padding-top: 0;
 }
 
 @keyframes fadeInUp {
@@ -1827,19 +1826,22 @@ main,
 }
 
 main {
-  padding: 5.5rem max(1.5rem, calc((100% - 1400px) / 2)) 2rem;
+  padding: 68px max(1.5rem, calc((100% - 1400px) / 2)) 2rem;
   min-height: calc(100vh - 80px);
 }
 
-section {
-  margin-bottom: 2.5rem;
+section:not(.hero-studio-wrapper) {
+  margin-top: 0;
+  margin-bottom: 70px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .section {
-  padding: 2rem 0;
+  padding: 0;
   background: transparent;
   border-radius: 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 70px 0;
   animation: fadeInUp 700ms ease-out forwards;
   animation-delay: 100ms;
 }
@@ -3179,10 +3181,10 @@ section {
 }
 
 .section {
-  padding: 2.5rem 0;
+  padding: 0;
   background: transparent;
   border-radius: 0;
-  margin: 1rem 0;
+  margin: 0 0 70px 0;
   animation: fadeInUp 700ms ease-out forwards;
   animation-delay: 100ms;
 }
@@ -4006,7 +4008,7 @@ section {
 
 @media (max-width: 768px) {
   main {
-    padding: 6.5rem max(1rem, calc((100% - 1400px) / 2)) 2.5rem;
+    padding: 68px max(1rem, calc((100% - 1400px) / 2)) 2.5rem;
   }
 
   .hero {
@@ -4014,7 +4016,8 @@ section {
   }
 
   .section {
-    padding: 1.5rem 0 0.4rem;
+    padding: 0;
+    margin: 0 0 70px 0;
   }
 }
 
@@ -4035,7 +4038,7 @@ section {
   }
 
   main {
-    padding: 5.5rem max(1rem, calc((100% - 1400px) / 2)) 2.3rem;
+    padding: 68px max(1rem, calc((100% - 1400px) / 2)) 2.3rem;
   }
 
   .hero {
@@ -4136,9 +4139,9 @@ section {
 .careers-header,
 .blog-header,
 .contact-header {
-  padding: 2.25rem 0 3rem;
+  padding: 2.25rem 0 0;
   max-width: 850px;
-  margin: 0 auto;
+  margin: 0 auto 70px auto;
 }
 
 .about-header h1,
@@ -4221,7 +4224,8 @@ section {
 
 /* Timeline System */
 .timeline-section {
-  padding: 4rem 0;
+  padding: 0;
+  margin-bottom: 70px;
 }
 
 .timeline-container {
@@ -4320,14 +4324,14 @@ section {
    Services Page Styles
    ========================================== */
 .services-list-section {
-  margin: 2rem 0;
+  margin: 0 0 70px 0;
 }
 
 .services-large-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0;
 }
 
 .service-detail-card {
@@ -4340,6 +4344,11 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.sd-header .service-icon-wrapper {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .sd-icon {
@@ -4466,7 +4475,7 @@ section {
    ========================================== */
 .jobs-section {
   max-width: 900px;
-  margin: 2rem auto 5rem;
+  margin: 0 auto 70px;
 }
 
 .jobs-section h2 {
@@ -4766,7 +4775,7 @@ section {
 
 /* Spotlight Featured Article */
 .featured-blog-spotlight {
-  margin-bottom: 3.5rem;
+  margin-bottom: 70px;
 }
 
 .featured-post-card {
@@ -4967,7 +4976,7 @@ section {
 
 /* Blog Cards Grid */
 .blog-grid-section {
-  margin-bottom: 4rem;
+  margin-bottom: 70px;
 }
 
 .blog-grid {
@@ -5418,7 +5427,8 @@ section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   padding: 0.9rem 0;
   overflow: hidden;
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 70px;
   position: relative;
   z-index: 1;
 }
@@ -5936,7 +5946,7 @@ textarea {
 /* Medium & Small Tablets (<= 960px) */
 @media (max-width: 960px) {
   main {
-    padding: 5rem max(1rem, calc((100% - 1400px) / 2)) 2rem;
+    padding: 68px max(1rem, calc((100% - 1400px) / 2)) 2rem;
   }
 
   .hero.hero-banner-card {
@@ -6230,7 +6240,8 @@ textarea {
    PARTNERS SHOWCASE SECTION (ABOUT PAGE)
    ========================================================================== */
 .partners-section {
-  padding: 4.5rem 0 2rem 0;
+  padding: 0;
+  margin-bottom: 70px;
   position: relative;
   width: 100%;
 }
@@ -6553,7 +6564,7 @@ textarea {
 
 .legal-header {
   margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 70px;
 }
 
 .legal-meta-strip {
@@ -7258,7 +7269,6 @@ select option:disabled {
 }
 
 .service-icon-wrapper {
-  margin-left: auto;
   width: 42px;
   height: 42px;
   border-radius: 12px;
@@ -7270,6 +7280,11 @@ select option:disabled {
   justify-content: center;
   transition: all 300ms ease;
   flex-shrink: 0;
+}
+
+.service-card-top .service-icon-wrapper,
+.sd-other-top .service-icon-wrapper {
+  margin-left: auto;
 }
 
 .service-card-item:hover .service-icon-wrapper,
@@ -7362,7 +7377,7 @@ select option:disabled {
 .sd-hero-section {
   text-align: center;
   max-width: 860px;
-  margin: 0 auto 3.5rem;
+  margin: 0 auto 70px auto;
 }
 
 .sd-hero-badge-wrap {
@@ -7414,7 +7429,7 @@ select option:disabled {
 
 /* Overview Section */
 .sd-overview-section {
-  margin-bottom: 4rem;
+  margin-bottom: 70px;
 }
 
 .sd-overview-card {
@@ -7440,7 +7455,7 @@ select option:disabled {
 
 /* Capabilities Grid */
 .sd-capabilities-section {
-  margin-bottom: 5rem;
+  margin-bottom: 70px;
 }
 
 .sd-bullets-grid {
@@ -7501,7 +7516,7 @@ select option:disabled {
 
 /* Benefits Section */
 .sd-benefits-section {
-  margin-bottom: 5rem;
+  margin-bottom: 70px;
 }
 
 .sd-benefits-grid {
@@ -7542,7 +7557,7 @@ select option:disabled {
 
 /* Process Section */
 .sd-process-section {
-  margin-bottom: 5rem;
+  margin-bottom: 70px;
 }
 
 .sd-process-grid {
@@ -7590,7 +7605,7 @@ select option:disabled {
 
 /* FAQ Section */
 .sd-faq-section {
-  margin-bottom: 5rem;
+  margin-bottom: 70px;
 }
 
 .sd-faq-list {
@@ -7624,7 +7639,7 @@ select option:disabled {
 
 /* Contact CTA Section */
 .sd-contact-cta-section {
-  margin-bottom: 5rem;
+  margin-bottom: 70px;
 }
 
 .sd-contact-shell {
@@ -7899,8 +7914,37 @@ select option:disabled {
   }
 }
 
+/* ==========================================================================
+   Universal 70px Vertical Gap Between Every Two Sections Across Website
+   ========================================================================== */
+section:not(.hero-studio-wrapper),
+.section,
+.agency-trust-banner-section,
+.services-section-wrapper,
+.about-intro-grid,
+.values-section,
+.timeline-section,
+.partners-section,
+.services-list-section,
+.sd-overview-section,
+.sd-capabilities-section,
+.sd-benefits-section,
+.sd-process-section,
+.sd-faq-section,
+.sd-contact-cta-section,
+.sd-other-services,
+.jobs-section,
+.apply-section,
+.featured-blog-spotlight,
+.blog-grid-section,
+.contact-grid-main {
+  margin-top: 0 !important;
+  margin-bottom: 70px !important;
+}
 
-
-
-
+/* Strictly ensure no spacing is added to the Hero section */
+.hero-studio-wrapper {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 
