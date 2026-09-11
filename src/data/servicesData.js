@@ -288,6 +288,114 @@ export const servicesData = [
     ]
   },
   {
+    slug: 'software-development',
+    id: 'software-dev',
+    number: '10',
+    icon: '⚙️',
+    title: 'Software Development',
+    heroTitle: 'Scalable Custom Software Engineered for Real Business Outcomes',
+    tagline: 'End-to-end software solutions — from SaaS platforms and internal tools to API ecosystems and enterprise systems.',
+    description: 'Bespoke software solutions built for performance, scalability, and measurable business impact.',
+    fullDescription: 'From SaaS platforms and internal business tools to REST APIs and enterprise-grade systems, KORVEX engineers custom software that solves real operational bottlenecks. We combine modern full-stack architecture with rigorous QA to deliver reliable, maintainable, and scalable software products.',
+    bullets: [
+      'Full-Stack Web Application Development',
+      'SaaS Platform Architecture & Multi-Tenancy',
+      'REST & GraphQL API Design & Integration',
+      'Custom CRM, ERP & Business Automation Tools',
+      'Cloud Infrastructure & DevOps (AWS, GCP, Azure)',
+      'Database Design, Optimization & Data Modeling',
+      'Automated Testing, CI/CD & Code Quality Pipelines',
+      'Legacy System Modernization & Tech Stack Migration'
+    ],
+    benefits: [
+      { title: 'Built for Scale', desc: 'Modular, cloud-native architecture that grows effortlessly alongside your user base and data volume.' },
+      { title: 'Reduced Operational Cost', desc: 'Custom automation and tooling that eliminate manual workflows and reduce overhead.' },
+      { title: 'Full Ownership', desc: 'Clean, well-documented codebases with no vendor lock-in and complete IP ownership.' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Discovery & Requirements', desc: 'Mapping business processes, user flows, technical constraints, and integration requirements.' },
+      { step: '02', title: 'Architecture & Planning', desc: 'Designing system architecture, database schemas, API contracts, and deployment strategy.' },
+      { step: '03', title: 'Agile Development', desc: 'Iterative sprint-based engineering with continuous code reviews, testing, and stakeholder demos.' },
+      { step: '04', title: 'Deployment & Handover', desc: 'Production deployment, documentation delivery, team training, and ongoing support.' }
+    ],
+    faqs: [
+      { q: 'Can you build software that integrates with our existing systems?', a: 'Yes, we specialize in API-first integrations with CRMs, ERPs, payment providers, and third-party data sources.' },
+      { q: 'Do you provide source code and documentation after project completion?', a: 'Absolutely. You receive full source code ownership, technical documentation, and optional onboarding sessions.' }
+    ]
+  },
+  {
+    slug: 'google-ads',
+    id: 'google-ads',
+    number: '11',
+    icon: '🎯',
+    title: 'Google Ads',
+    heroTitle: 'Intent-Driven Google Ads Campaigns Built to Maximize ROI & Revenue',
+    tagline: 'Search, Shopping, Performance Max, and Display campaigns expertly managed to lower CPA and scale profitable growth.',
+    description: 'High-performance Google Ads campaigns engineered for maximum ROAS and predictable lead flow.',
+    fullDescription: 'Capture buyers at the exact moment they search for your product or service. KORVEX manages full-funnel Google Ads campaigns across Search, Shopping, Performance Max, and Display — combining precise keyword targeting, compelling ad copy, smart bidding strategies, and continuous conversion rate optimization to drive measurable, scalable revenue.',
+    bullets: [
+      'Search, Shopping & Performance Max Campaigns',
+      'High-Intent Keyword Research & Negative Lists',
+      'Compelling Ad Copy & Extension Optimization',
+      'Smart Bidding & Automated Strategy Management',
+      'Google Tag Manager & Conversion Tracking Setup',
+      'Landing Page CRO & Quality Score Improvement',
+      'Remarketing & Customer Match Audiences',
+      'Weekly Transparent ROAS & CPA Reporting'
+    ],
+    benefits: [
+      { title: 'Immediate High-Intent Traffic', desc: 'Reach buyers actively searching for exactly what you offer, at the precise moment of purchase intent.' },
+      { title: 'Profitable Cost-Per-Acquisition', desc: 'Data-driven bidding and continuous optimization to keep your CPA below target thresholds.' },
+      { title: 'Full Funnel Visibility', desc: 'End-to-end attribution from click to closed sale, with crystal-clear ROAS dashboards.' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Account Audit & Strategy', desc: 'Analyzing existing campaigns, quality scores, competitor bidding, and keyword landscape.' },
+      { step: '02', title: 'Campaign Architecture', desc: 'Structuring ad groups, match types, extensions, and landing page alignment for maximum Quality Score.' },
+      { step: '03', title: 'Launch & Testing', desc: 'Running controlled ad copy tests, bidding experiments, and audience segmentation.' },
+      { step: '04', title: 'Scaling & Optimization', desc: 'Expanding winning keywords, pruning waste, and scaling budgets against proven ROAS targets.' }
+    ],
+    faqs: [
+      { q: 'What minimum budget do you recommend for Google Ads?', a: 'We typically recommend a minimum monthly ad spend of $1,500 to allow meaningful data collection across keywords and ad variations.' },
+      { q: 'Do you manage Google Shopping and Performance Max campaigns?', a: 'Yes, we manage Search, Shopping, Display, YouTube, and Performance Max campaign types depending on your goals.' }
+    ]
+  },
+  {
+    slug: 'seo',
+    id: 'seo',
+    number: '12',
+    icon: '🔍',
+    title: 'SEO',
+    heroTitle: 'Organic Search Dominance Through Technical SEO, Content & Authority Building',
+    tagline: 'Comprehensive SEO strategies that increase keyword rankings, organic traffic, and compounding long-term revenue.',
+    description: 'Full-spectrum SEO that drives compounding organic rankings, traffic, and sustainable lead flow.',
+    fullDescription: 'Stop renting traffic — own it. KORVEX delivers comprehensive SEO programs spanning technical site health, on-page content optimization, structured data, Core Web Vitals, and strategic link authority building. We engineer long-term organic visibility that reduces dependency on paid channels and builds compounding, sustainable search dominance.',
+    bullets: [
+      'Technical SEO Audit & Site Architecture Fixes',
+      'Core Web Vitals & Page Speed Optimization',
+      'Keyword Research, Clustering & Content Strategy',
+      'On-Page Optimization & Semantic HTML Structure',
+      'Schema Markup & Rich Snippet Implementation',
+      'Authority Link Building & Digital PR Outreach',
+      'Local SEO & Google Business Profile Optimization',
+      'Monthly Rankings, Traffic & ROI Reporting'
+    ],
+    benefits: [
+      { title: 'Compounding Organic Revenue', desc: 'Rankings built today generate free, high-intent traffic for months and years ahead.' },
+      { title: 'Lower Customer Acquisition Cost', desc: 'Organic leads cost a fraction of paid traffic, dramatically improving long-term marketing ROI.' },
+      { title: 'Brand Authority & Trust', desc: 'First-page rankings signal credibility and expertise to prospective buyers before they even visit.' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Technical SEO Audit', desc: 'Crawling the site for indexation errors, speed issues, broken links, duplicate content, and Core Web Vitals gaps.' },
+      { step: '02', title: 'Keyword & Content Strategy', desc: 'Mapping high-opportunity keywords to content gaps, intent clusters, and revenue-driving pages.' },
+      { step: '03', title: 'On-Page & Technical Implementation', desc: 'Optimizing title tags, meta descriptions, schema markup, internal linking, and page architecture.' },
+      { step: '04', title: 'Authority Building & Reporting', desc: 'Executing targeted link outreach, monitoring ranking movements, and delivering monthly ROI reports.' }
+    ],
+    faqs: [
+      { q: 'How long does SEO take to show results?', a: 'Initial ranking improvements are typically visible within 60–90 days, with compounding growth building significantly over 6–12 months.' },
+      { q: 'Do you handle both on-page and off-page SEO?', a: 'Yes, our full-spectrum programs cover technical SEO, content optimization, and authority link building as an integrated strategy.' }
+    ]
+  },
+  {
     slug: 'growth-strategy',
     id: 'growth-strat',
     number: '09',
